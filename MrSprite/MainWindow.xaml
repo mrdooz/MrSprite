@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MrSprite.MainWindow"
+        Title="MainWindow" Height="435" Width="632" KeyUp="Window_KeyUp">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image x:Name="img" Grid.Row="0" Width="256" Height="256"/>
+        <Canvas x:Name="canvas" Grid.Row="1" Height="100" VerticalAlignment="Top" Background="Beige"  Margin="5" MouseLeftButtonUp="canvas_MouseLeftButtonUp" MouseMove="canvas_MouseMove" MouseLeftButtonDown="canvas_MouseLeftButtonDown"/>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2" Orientation="Horizontal" Margin="0,5">
+        	<Button x:Name="doit" Click="Button_Click" Width="75" Content="do it!" Margin="5,0"/>
+        	<Button x:Name="reset" Content="reset" Margin="5,0" Width="75" Click="reset_Click"/>
+        	<Button x:Name="save" Content="Save" Width="75" Click="save_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
